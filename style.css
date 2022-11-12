@@ -84,7 +84,7 @@
     
 }
 
-.response-api-1-user, .response-api-2-user, .response-api-2-website, .response-api-2-password {
+.response-api-1-user, .response-api-2-user, .response-api-2-website, .response-api-2-password, .response-api-3-user {
     padding-bottom: 15px;
     border-bottom: 1px solid black;
     color: greenyellow;
@@ -92,7 +92,7 @@
     font-size: 24px;
 }
 
-.response-api-1-website, .response-api-2-key {
+.response-api-1-website, .response-api-2-key, .response-api-3-website {
     color: greenyellow;
     font-weight: bold;
     font-size: 24px;
