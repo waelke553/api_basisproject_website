@@ -5,9 +5,19 @@
 
 .text {
     text-align: center;
+    
+}
+
+.ps {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
     margin-bottom: 50px;
 }
 
+.ps > span {
+    color: red;
+}
 
 .container {
     display: flex;
@@ -68,7 +78,7 @@
     overflow: auto;
 }
 
-.api-1-reply {
+.api-1-reply, .api-2-reply, .api-3-reply {
     display: flex;
     flex-wrap: wrap;
     
@@ -77,4 +87,24 @@
 .response-api-1-user, .response-api-2-user, .response-api-2-website, .response-api-2-password {
     padding-bottom: 15px;
     border-bottom: 1px solid black;
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 24px;
 }
+
+.response-api-1-website, .response-api-2-key {
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.response-api-error {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.api-forem-section {
+    min-height: 150px;
+}
+

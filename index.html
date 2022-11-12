@@ -13,6 +13,8 @@
     <p class="text">Here you have 3 options to call my API. <br>
         Fill in the input fields and the api will do the rest</p>
 
+    <p class="ps">P.S. Expres heb ik bij de input fields <span>geen "REQUERED"</span> gezet zodat je fouten kan maken bij de API calls.</p>
+
     <div class="container">
 
         <div class="api-1">  
@@ -23,18 +25,20 @@
             
                 <div x-data="{ user_name_api_1: '', url_api_1: '' }">
 
-                <div class="api-forem">
-                    <label for="user_name1">User Name</label>
-                    <input type="text" id="user_name1" x-model="user_name_api_1">
-                </div>
+                <div class="api-forem-section">
+                    <div class="api-forem">
+                        <label for="user_name1">User Name</label>
+                        <input type="text" id="user_name1" x-model="user_name_api_1">
+                    </div>
 
-                <div class="api-button">
-                    <button onclick="api_1()">Get Request</button>
+                    <div class="api-button">
+                        <button onclick="api_1()">Get Request</button>
+                    </div>
                 </div>
 
                 <h3>Link you creating to contact the api</h3>
                 <div class="api-link">
-                    <p id="url_api_1" x-model="url_api_1">https://hashing-service-waelke553.cloud.okteto.net/users/1/<span x-text="user_name_api_1"></span></p>
+                    <p id="url_api_1" x-model="url_api_1">https://hashing-service-waelke553.cloud.okteto.net/users/1/?user_name=<span x-text="user_name_api_1"></span></p>
                 </div>
                 <h3>Reply of Request 1</h3>
                 <div id="api-1-reply"></div>
@@ -50,28 +54,30 @@
 
                 <p class="api-comment">This api will decrypt a password of a website.</p>
 
-                <div class="api-forem">
-                    <label for="user_name2">User Name</label>
-                    <input type="text" id="user_name2" x-model="user_name_api_2">
-                </div>
+                <div class="api-forem-section">
+                    <div class="api-forem">
+                        <label for="user_name2">User Name</label>
+                        <input type="text" id="user_name2" x-model="user_name_api_2">
+                    </div>
 
-                <div class="api-forem">
-                    <label for="user_website2">User Website</label>
-                    <input type="text" id="user_website2" x-model="user_website_api_2">
-                </div>
+                    <div class="api-forem">
+                        <label for="user_website2">User Website</label>
+                        <input type="text" id="user_website2" x-model="user_website_api_2">
+                    </div>
 
-                <div class="api-forem">
-                    <label for="key2">Key</label>
-                    <input type="password" id="key2" x-model="key_api_2">
-                </div>
+                    <div class="api-forem">
+                        <label for="key2">Key password</label>
+                        <input type="password" id="key2" x-model="key_api_2">
+                    </div>
 
-                <div class="api-button">
-                    <button onclick="api_2()">Get Request</button>
+                    <div class="api-button">
+                        <button onclick="api_2()">Get Request</button>
+                    </div>
                 </div>
 
                 <h3>Link your creating to contact the api</h3>
                 <div class="api-link">
-                    <p id="url_api_2" x-model="url_api_2">https://hashing-service-waelke553.cloud.okteto.net/users/2/<span x-text="user_name_api_2"></span>/<span  x-text="user_website_api_2"></span>/<span  x-text="key_api_2"></span></p>
+                    <p id="url_api_2" x-model="url_api_2">https://hashing-service-waelke553.cloud.okteto.net/users/2/?user_name=<span x-text="user_name_api_2"></span>&user_website=<span  x-text="user_website_api_2"></span>&key_password=<span  x-text="key_api_2"></span></p>
                 </div>
                 
 
@@ -88,39 +94,46 @@
                 <h1 class="api-titel">Api request 3 (POST)</h1>
                 <p class="api-comment">This api will post your nieuw information into a file.</p>
 
-                <div class="api-forem">
-                    <label for="user_name3">User Name</label>
-                    <input type="text" id="user_name3" x-model="user_name_api_3">
-                </div>
-    
-                <div class="api-forem">
-                    <label for="user_website3">User Website</label>
-                    <input type="text" id="user_website3" x-model="user_website_api_3">
-                </div>
-    
-                <div class="api-forem">
-                    <label for="user_password3">Password</label>
-                    <input type="password" id="user_password3" x-model="user_password_api_3">
-                </div>
-    
-                <div class="api-forem">
-                    <label for="key3">Key</label>
-                    <input type="password" id="key3" x-model="key_api_3">
+                <div class="api-forem-section">
+                    <div class="api-forem">
+                        <label for="user_name3">User Name</label>
+                        <input type="text" id="user_name3" x-model="user_name_api_3">
+                    </div>
+        
+                    <div class="api-forem">
+                        <label for="user_website3">User Website</label>
+                        <input type="text" id="user_website3" x-model="user_website_api_3">
+                    </div>
+        
+                    <div class="api-forem">
+                        <label for="user_password3">Password</label>
+                        <input type="password" id="user_password3" x-model="user_password_api_3">
+                    </div>
+        
+                    <div class="api-forem">
+                        <label for="key3">Key password</label>
+                        <input type="password" id="key3" x-model="key_api_3">
+                    </div>
+
+                    <div class="api-button">
+                        <button onclick="api_3()">Get Request</button>
+                    </div>
                 </div>
 
-                <div class="api-button">
-                    <button onclick="api_3()">Get Request</button>
-                </div>
                 <h3>Link your creating to contact the api</h3>
                 <div class="api-link">
-                    <p id="url_api_3" x-model="url_api_3">https://hashing-service-waelke553.cloud.okteto.net/users/3/<span x-text="user_name_api_3"></span>/<span  x-text="user_website_api_3"></span>/<span x-text="user_password_api_3"></span>/<span  x-text="key_api_3"></span></p>
+                    <p id="url_api_3" x-model="url_api_3">https://hashing-service-waelke553.cloud.okteto.net/users/3/?user_name=<span x-text="user_name_api_3"></span>&user_website=<span  x-text="user_website_api_3"></span>&user_password=<span x-text="user_password_api_3"></span>&key_password=<span  x-text="key_api_3"></span></p>
                 </div>
+
+                <h3>Reply of Request 3</h3>
+                <div id="api-3-reply"></div>
                 
             </div> 
-            
-
         </div>
+
     </div>
+
+    
     </body>
 
     <script>
@@ -131,7 +144,7 @@
         
         window.api_1 = function api_1() {
             const url_api_1 = document.getElementById("url_api_1").innerText;
-            // const url_api_1 = "http://localhost:8000/users/1/wael"
+            // const url_api_1 = "http://localhost:8000/users/1/?user_name=wael"
             
             const api_1_reply = document.getElementById('api-1-reply');
             // Create new elements
@@ -139,7 +152,9 @@
             newDiv.className = 'response-api-1-user';
             var newDiv2 = document.createElement('p');
             newDiv2.className = 'response-api-1-website';
-         
+            
+            var error = document.createElement('p');
+            error.className = 'response-api-error';
             
             // fetch(url_api_1, {
             //     "method": "GET"
@@ -159,35 +174,43 @@
                 "method": "GET"
                 });
                 const data = await response.json();
-                
-                for (var i in data) {
-                    if (i == "user_name") {
-                        
-
-                        console.log(data[i])
-                        newDiv.innerHTML = user + data[i];
-                    } else {
-                        var websites = "Websites: ";
-                        for (var j in data[i]) {
-                            console.log(data[i][j])
-                            websites += data[i][j] + ", ";
-                        }
-                        
-                        
-                    }
-
-                    
-                    // console.log(i)
-                }
 
                 // Clear section for next output
                 api_1_reply.innerHTML = "";
 
-                api_1_reply.appendChild(newDiv);
+                if ( "error" in data) {
+                    // console.log(data["error"])
+                    error.innerHTML = "Error: " + data["error"]
+                    api_1_reply.appendChild(error);
+                } else {
+
+                    for (var i in data) {
+                        if (i == "user_name") {
+                            
+
+                            console.log(data[i])
+                            newDiv.innerHTML = user + data[i];
+                        } else {
+                            var websites = "Websites: ";
+                            for (var j in data[i]) {
+                                console.log(data[i][j])
+                                websites += data[i][j] + ", ";
+                            }
+                            
+                            
+                        }
+                    // console.log(i)
+                    }
+
+                    
+
+                    api_1_reply.appendChild(newDiv);
+                    
+                    const end_result_website = websites.slice(0, -2)
+                    newDiv2.innerHTML = end_result_website
+                    api_1_reply.appendChild(newDiv2);
+                }
                 
-                const end_result_website = websites.slice(0, -2)
-                newDiv2.innerHTML = end_result_website
-                api_1_reply.appendChild(newDiv2);
 
                 return data
             }
@@ -200,8 +223,8 @@
 
         window.api_2 = function api_2() {
             const url_api_2 = document.getElementById("url_api_2").innerText;
-            // const url_api_2 = "http://localhost:8000/users/2/wael/google/ik123";
-
+            // const url_api_2 = "http://localhost:8000/users/2/?user_name=wael&user_website=google&key_password=ik1234";
+            // ?user_name=wael&user_website=google&key_password=ik1234
 
             const api_2_reply = document.getElementById('api-2-reply');
             // Create new elements
@@ -217,33 +240,44 @@
             var newDiv4 = document.createElement('p');
             newDiv4.className = 'response-api-2-key';
 
+            var error = document.createElement('p');
+            error.className = 'response-api-error';
+
             async function api_2() {
                 const response = await fetch(url_api_2, {
                 "method": "GET"
                 });
                 const data = await response.json();
-                
-                for (var i in data) {
-                    if (i == "user_name"){
-                        newDiv.innerHTML = user + data[i];
-                    } else if (i == "website") {
-                        newDiv2.innerHTML = website + data[i];
-                    } else if (i == "password") {
-                        newDiv3.innerHTML = password + data[i];
-                    } else if (i == "key") {
-                        newDiv4.innerHTML = key + data[i];
-                    }
-                console.log(i)
-                }
+                console.log(data)
 
                 // Clear section for next output
                 api_2_reply.innerHTML = "";
 
-                api_2_reply.appendChild(newDiv);
-                api_2_reply.appendChild(newDiv2);
-                api_2_reply.appendChild(newDiv3);
-                api_2_reply.appendChild(newDiv4);
+                if ("error" in data) {
+                    // console.log(data["error"])
+                    error.innerHTML = "Error: " + data["error"]
+                    api_2_reply.appendChild(error);
+                } else {
 
+                    for (var i in data) {
+                        if (i == "user_name"){
+                            newDiv.innerHTML = user + data[i];
+                        } else if (i == "website") {
+                            newDiv2.innerHTML = website + data[i];
+                        } else if (i == "password") {
+                            newDiv3.innerHTML = password + data[i];
+                        } else if (i == "key") {
+                            newDiv4.innerHTML = key + data[i];
+                        }
+                        console.log(i)
+                    }
+
+                    api_2_reply.appendChild(newDiv);
+                    api_2_reply.appendChild(newDiv2);
+                    api_2_reply.appendChild(newDiv3);
+                    api_2_reply.appendChild(newDiv4);
+                }
+                
             }
 
             api_2()
@@ -254,24 +288,55 @@
 
         window.api_3 = function api_3() {
             const url_api_3 = document.getElementById("url_api_3").innerText;
-            // const url_api_3 = "http://localhost:8000/users/3/wael/google1234/test/ik123";
+            // const url_api_3 = "http://localhost:8000/users/3/?user_name=wael&user_website=google&user_password=test123&key_password=ik123";
+            // ?user_name=wael&user_website=google&user_password=test123&key_password=ik1234
+
+            const api_3_reply = document.getElementById('api-3-reply');
+
+            // Create new elements
+            var newDiv = document.createElement('p');
+            newDiv.className = 'response-api-3-user';
+            var newDiv2 = document.createElement('p');
+            newDiv2.className = 'response-api-3-website';
+            
+            // Create new elements
+            var error = document.createElement('p');
+            error.className = 'response-api-error';
 
 
             async function api_3() {
                 const response = await fetch(url_api_3, {
-                "method": "POST",
-                "mode": "no-cors"
+                "method": "POST"
+                // "mode": "no-cors"
                 });
                 const data = await response.json();
-                
-                
                 // console.log(data)
 
+                // Clear section for next output
+                api_3_reply.innerHTML = "";
+
+                if ("error" in data) {
+                    error.innerHTML = "Error: " + data["error"];
+                    api_3_reply.appendChild(error);
+                    console.log(data)
+                } else if ("detail" in data) {
+                    error.innerHTML = "Error: " + data["detail"][0]["msg"] + "\n => '" +  data["detail"][0]["loc"][1].toUpperCase() + "'";
+                    api_3_reply.appendChild(error);
+
+                    
+                } else {
+                    newDiv.innerHTML = "User: " + data["user_name"];
+                    newDiv2.innerHTML = "Website: " + data["website"];
+                    api_3_reply.appendChild(newDiv);
+                    api_3_reply.appendChild(newDiv2);
+                    alert('POST succesfully received');
+                }
+                
             // console.log(url_api_3)
             }
 
             api_3()
-            alert('POST received');
+            
         }
       </script>
 </html>
