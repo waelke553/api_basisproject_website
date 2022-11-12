@@ -8,6 +8,10 @@
     
 }
 
+.text > span {
+    font-size: 8px;
+}
+
 .ps {
     text-align: center;
     text-transform: uppercase;
